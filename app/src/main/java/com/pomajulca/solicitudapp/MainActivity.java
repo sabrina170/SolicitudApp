@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.List;
@@ -33,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         initialize();
 
     }
+    public void showRegister(View view){
+        startActivityForResult(new Intent(this, RegisterActivity.class), REGISTER_FORM_REQUEST);
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -86,5 +91,6 @@ public class MainActivity extends AppCompatActivity {
 
         });
     }
+
 
 }
